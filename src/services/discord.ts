@@ -1,7 +1,7 @@
 import { By } from "selenium-webdriver";
 import { getDriver } from "./driver";
 
-export async function login(data: {email: string, password: string}) {
+export async function login(data: {email: string, password: string}): Promise<void> {
     const driver = await getDriver();
     await driver.get("https://discord.com/login");
 
@@ -13,3 +13,14 @@ export async function login(data: {email: string, password: string}) {
     await passwordInput.sendKeys(data.password);
     await submit.click();
 }
+
+export async function getServer(server: string): Promise<void> {
+    const driver = await getDriver();
+    await driver.get(`https://discord.com/channels/${server}`);
+}
+
+export async function getChannel(server: string, channel: string): Promise<void> {
+    const driver = await getDriver();
+    await driver.get(`https://discord.com/channels/${server}/${channel}`);
+}
+

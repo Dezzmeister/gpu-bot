@@ -1,5 +1,10 @@
 {
-    "email": "your-email@gmail.com",
+    "email": "email@gmail.com",
     "password": "[REDACTED]",
-    "channel": "780111457194999819"
+    "server": "780111457194999819",
+    "channels": [
+        "787448925270835230",
+        "783835657595912213",
+        "783835699312328724"
+    ]
 }
